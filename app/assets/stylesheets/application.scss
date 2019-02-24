@@ -1,0 +1,44 @@
+@import "bootstrap";
+
+$main_color: #f5f5f5;
+$base_color: #fff;
+$accent_color: #ffea00;
+$base_margin: 4px;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body > .container {
+  padding: $base_margin * 7 $base_margin * 4 0;
+  margin-bottom: $base_margin * 20;
+}
+
+.footer {
+  width: 100%;
+  height: $base_margin * 15;
+  position: absolute;
+  bottom: 0;
+  line-height: $base_margin * 15;
+  background-color: $main_color;
+  .container {
+    padding-right: $base_margin * 4;
+    padding-left: $base_margin * 4;
+  }
+}
+
+.pages .top-img {
+  position: relative;
+  height: $base_margin * 75;
+  overflow: hidden;
+  background: url(/top-bg.jpg) no-repeat 50% 80%;
+  background-size: cover;
+  .lead {
+    position: absolute;
+    bottom: $base_margin;
+    right: $base_margin * 2;
+    font-size: 1rem;
+    color: $base_color;
+  }
+}

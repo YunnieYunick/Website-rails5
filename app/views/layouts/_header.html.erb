@@ -1,0 +1,15 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <a class="navbar-brand" href="/">Site Name</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbars">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "Site Nameについて", pages_about_path, class: "nav-link #{yield(:about_active)}" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
