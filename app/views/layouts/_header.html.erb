@@ -9,6 +9,9 @@
         <li class="nav-item">
           <%= link_to "Site Nameについて", pages_about_path, class: "nav-link #{yield(:about_active)}" %>
         </li>
+        <li class="nav-item">
+          <%= link_to "お問い合わせ", contacts_index_path, class: "nav-link #{yield(:contact_active)}" %>
+        </li>
       </ul>
     </div>
   </nav>

@@ -1,0 +1,24 @@
+<% provide :title ,"お問い合わせ" %>
+<% provide :contact_active ,"active" %>
+
+<div class="container">
+  <div class="h1">お問い合わせ</div>
+  <p class="lead">入力内容をご確認ください</p>
+
+  <%= form_for @contact,:url => contacts_create_path,:html => {:class => 'contact_form'} do |f| %>
+
+    <dl class="row">
+      <dt class="col-sm-12"><%= f.label :name, "お名前" %></dt>
+      <dd class="col-sm-12"><%= @contact.name %><%= f.hidden_field :name, class: "form-group　form-control" %></dd>
+      <dt class="col-sm-12"><%= f.label :email, "メールアドレス（半角）" %></dt>
+      <dd class="col-sm-12"><%= @contact.email %><%= f.hidden_field :email, class: "form-group　form-control" %></dd>
+      <dt class="col-sm-12"><%= f.label :message, "お問い合わせ内容" %></dt>
+      <dd class="col-sm-12"><%= @contact.message %><%= f.hidden_field :message, class: "form-group　form-control" %></dd>
+    </dl>
+    <p class="col-sm-12">
+      <%= f.submit "戻る", name: "back", class: "btn btn-secondary btn-back" %>
+      <%= f.submit "この内容で送信する", class: "btn btn-primary" %>
+    </p>
+  <% end %>
+
+</div>
